@@ -7,7 +7,7 @@
   <title>The Meme Emporium</title>
 </head>
 
-<body>
+<body onload="init()">
 
   <div class="page">
 
@@ -21,6 +21,9 @@
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="/pages/gallery.html">Gallery<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/random-meme.html">Random Meme</a>
           </li>
         </ul>
       </div>
@@ -42,177 +45,184 @@
         </p>
       </div>
 
-
-      <div class="container">
-        <h3>Current Memes</h3>
-
-        <p class="description">
-          It can be hard to determine when a meme truly came into being. Some can
-          go largely unnoticed for months or years until they find the right audience.
-          As such, "current" memes are considered memes that are current trending on the
-          internet, regardless of their original debut.
-        </p>
-
-        <div class="row">
-          <div class="img-container">
-            <img class="cap-img" src='/images/current-memes/bateman-walkman.jpg'/>
-            <p class="caption">Bateman Enjoying Music</p>
-          </div>
-
-          <div class="img-container">
-            <img class="cap-img" src='/images/current-memes/beard-guy.jpg'/>
-            <p class="caption">Beard Guy</p>
-          </div>
-
-          <div class="img-container">
-            <img class="cap-img" src='/images/current-memes/gentlemen-frog.png'/>
-            <p class="caption">Gentleman Frog</p>
-          </div>
-
-          <div class="img-container">
-            <img class="cap-img" src='/images/current-memes/gigachad.jpg'/>
-            <p class="caption">Gigachad</p>
-          </div>
-
-          <div class="img-container">
-            <img class="cap-img" src='/images/current-memes/obama-award.png'/>
-            <p class="caption">Obama Self-Award</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="img-container">
-            <img class="cap-img" src='/images/current-memes/will-slap.jpg'/>
-            <p class="caption">Will Smith Slapping Chris Rock</p>
-          </div>
-        </div>
-
+      <!-- Tab links -->
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Current')">Current Memes</button>
+        <button class="tablinks" onclick="openCity(event, 'Dated')">Dated Memes</button>
+        <button class="tablinks" onclick="openCity(event, 'Founding')">Founding Memes</button>
       </div>
 
-      <div class="divider"></div>
+      <!-- Tab content -->
+      <div id="Current" class="tabcontent">
+        <div class="container">
+          <h3>Current Memes</h3>
 
-      <div class="container">
-        <h3>Dated Memes</h3>
+          <p class="description">
+            It can be hard to determine when a meme truly came into being. Some can
+            go largely unnoticed for months or years until they find the right audience.
+            As such, "current" memes are considered memes that are current trending on the
+            internet, regardless of their original debut.
+          </p>
 
-        <p class="description">
-          Dated memes are a mixed bunch. Some still find sporadic use because of their
-          ability to present a certain sensation. Others are so old that their age becomes
-          something of a meme in itself. While some memes truly die and are likely to never
-          catch attention again, many whose day has long passed are remembered fondly and
-          used to elicit feelings of nostalgia.
-        </p>
+          <div class="row">
+            <div class="img-container">
+              <img class="cap-img" src='/images/current-memes/bateman-walkman.jpg'/>
+              <p class="caption">Bateman Enjoying Music</p>
+            </div>
 
-        <div class="row">
-          <div class="img-container">
-            <img class="cap-img" src='/images/dated-memes/aint-much.png'/>
-            <p class="caption">It Ain't Much, but it's Honest Work</p>
+            <div class="img-container">
+              <img class="cap-img" src='/images/current-memes/beard-guy.jpg'/>
+              <p class="caption">Beard Guy</p>
+            </div>
+
+            <div class="img-container">
+              <img class="cap-img" src='/images/current-memes/gentlemen-frog.png'/>
+              <p class="caption">Gentleman Frog</p>
+            </div>
+
+            <div class="img-container">
+              <img class="cap-img" src='/images/current-memes/gigachad.jpg'/>
+              <p class="caption">Gigachad</p>
+            </div>
+
+            <div class="img-container">
+              <img class="cap-img" src='/images/current-memes/obama-award.png'/>
+              <p class="caption">Obama Self-Award</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="img-container">
+              <img class="cap-img" src='/images/current-memes/will-slap.jpg'/>
+              <p class="caption">Will Smith Slapping Chris Rock</p>
+            </div>
           </div>
 
-          <div class="img-container">
-            <img class="cap-img" src='/images/dated-memes/board-meeting.jpg'/>
-            <p class="caption">Board Meeting</p>
-          </div>
-
-          <div class="img-container">
-            <img class="cap-img" src='/images/dated-memes/drake.jpg'/>
-            <p class="caption">Drake "No" and "Yes"</p>
-          </div>
-
-          <div class="img-container">
-            <img class="cap-img" src='/images/dated-memes/E.jpg'/>
-            <p class="caption">E</p>
-          </div>
-
-          <div class="img-container">
-            <img class="cap-img" src='/images/dated-memes/evil-kermit.jpg'/>
-            <p class="caption">Kermit vs Evil Kermit</p>
-          </div>
         </div>
-
-        <div class="row">
-          <div class="img-container">
-            <img class="cap-img" src='/images/dated-memes/grumpy-cat.jpg'/>
-            <p class="caption">Grumpy Cat</p>
-          </div>
-          <div class="img-container">
-            <img class="cap-img" src='/images/dated-memes/moth.jpg'/>
-            <p class="caption">Moth Wants Lamp</p>
-          </div>
-          <div class="img-container">
-            <img class="cap-img" src='/images/dated-memes/scared-guy.jpg'/>
-            <p class="caption">Pure Terror</p>
-          </div>
-          <div class="img-container">
-            <img class="cap-img" src='/images/dated-memes/shaggy.jpg'/>
-            <p class="caption">Shaggy</p>
-          </div>
-        </div>
-
       </div>
 
-      <div class="divider"></div>
+      <div id="Dated" class="tabcontent">
+        <div class="container">
+          <h3>Dated Memes</h3>
 
-      <div class="container">
-        <h3>Founding Memes</h3>
+          <p class="description">
+            Dated memes are a mixed bunch. Some still find sporadic use because of their
+            ability to present a certain sensation. Others are so old that their age becomes
+            something of a meme in itself. While some memes truly die and are likely to never
+            catch attention again, many whose day has long passed are remembered fondly and
+            used to elicit feelings of nostalgia.
+          </p>
 
-        <p class="description">
-          Some of the earliest intances of internet memes can be linked to
-          these images. Many, specifically those that appear hand-drawn,
-          originate from a 4-Chan trend called Rage Comics. Others just
-          happend to be some of the first memes to ever go viral. A lot has
-          changed since the advent of these iconic memes, but they will always
-          hold a special status of being among the first, and will never truly
-          die.
-        </p>
+          <div class="row">
+            <div class="img-container">
+              <img class="cap-img" src='/images/dated-memes/aint-much.png'/>
+              <p class="caption">It Ain't Much, but it's Honest Work</p>
+            </div>
 
-        <div class="row">
-          <div class="img-container">
-            <img class="cap-img" src='/images/founding-memes/bad-luck-brian.jpg'/>
-            <p class="caption">Bad Luck Brian</p>
+            <div class="img-container">
+              <img class="cap-img" src='/images/dated-memes/board-meeting.jpg'/>
+              <p class="caption">Board Meeting</p>
+            </div>
+
+            <div class="img-container">
+              <img class="cap-img" src='/images/dated-memes/drake.jpg'/>
+              <p class="caption">Drake "No" and "Yes"</p>
+            </div>
+
+            <div class="img-container">
+              <img class="cap-img" src='/images/dated-memes/E.jpg'/>
+              <p class="caption">E</p>
+            </div>
+
+            <div class="img-container">
+              <img class="cap-img" src='/images/dated-memes/evil-kermit.jpg'/>
+              <p class="caption">Kermit vs Evil Kermit</p>
+            </div>
           </div>
 
-          <div class="img-container">
-            <img class="cap-img" src='/images/founding-memes/cereal-guy.png'/>
-            <p class="caption">Cereal Guy</p>
+          <div class="row">
+            <div class="img-container">
+              <img class="cap-img" src='/images/dated-memes/grumpy-cat.jpg'/>
+              <p class="caption">Grumpy Cat</p>
+            </div>
+            <div class="img-container">
+              <img class="cap-img" src='/images/dated-memes/moth.jpg'/>
+              <p class="caption">Moth Wants Lamp</p>
+            </div>
+            <div class="img-container">
+              <img class="cap-img" src='/images/dated-memes/scared-guy.jpg'/>
+              <p class="caption">Pure Terror</p>
+            </div>
+            <div class="img-container">
+              <img class="cap-img" src='/images/dated-memes/shaggy.jpg'/>
+              <p class="caption">Shaggy</p>
+            </div>
           </div>
 
-          <div class="img-container">
-            <img class="cap-img" src='/images/founding-memes/challenge-accepted.png'/>
-            <p class="caption">Challenge Accepted</p>
-          </div>
-
-          <div class="img-container">
-            <img class="cap-img" src='/images/founding-memes/me-gusta.jpg'/>
-            <p class="caption">Me Gusta</p>
-          </div>
-
-          <div class="img-container">
-            <img class="cap-img" src='/images/founding-memes/okay-guy.jpg'/>
-            <p class="caption">Okay Guy</p>
-          </div>
         </div>
-
-        <div class="row">
-          <div class="img-container">
-            <img class="cap-img" src='/images/founding-memes/poker-face.jpg'/>
-            <p class="caption">Poker Face</p>
-          </div>
-          <div class="img-container">
-            <img class="cap-img" src='/images/founding-memes/socially-awkward-penguin.jpg'/>
-            <p class="caption">Socially Awkward Penguin</p>
-          </div>
-          <div class="img-container">
-            <img class="cap-img" src='/images/founding-memes/troll.jpg'/>
-            <p class="caption">Troll Face</p>
-          </div>
-          <div class="img-container">
-            <img class="cap-img" src='/images/founding-memes/you-dont-say.jpg'/>
-            <p class="caption">Nick Cage - You Don't Say?</p>
-          </div>
-        </div>
-
       </div>
 
-      <div class="divider"></div>
+      <div id="Founding" class="tabcontent">
+        <div class="container">
+          <h3>Founding Memes</h3>
+
+          <p class="description">
+            Some of the earliest intances of internet memes can be linked to
+            these images. Many, specifically those that appear hand-drawn,
+            originate from a 4-Chan trend called Rage Comics. Others just
+            happend to be some of the first memes to ever go viral. A lot has
+            changed since the advent of these iconic memes, but they will always
+            hold a special status of being among the first, and will never truly
+            die.
+          </p>
+
+          <div class="row">
+            <div class="img-container">
+              <img class="cap-img" src='/images/founding-memes/bad-luck-brian.jpg'/>
+              <p class="caption">Bad Luck Brian</p>
+            </div>
+
+            <div class="img-container">
+              <img class="cap-img" src='/images/founding-memes/cereal-guy.png'/>
+              <p class="caption">Cereal Guy</p>
+            </div>
+
+            <div class="img-container">
+              <img class="cap-img" src='/images/founding-memes/challenge-accepted.png'/>
+              <p class="caption">Challenge Accepted</p>
+            </div>
+
+            <div class="img-container">
+              <img class="cap-img" src='/images/founding-memes/me-gusta.jpg'/>
+              <p class="caption">Me Gusta</p>
+            </div>
+
+            <div class="img-container">
+              <img class="cap-img" src='/images/founding-memes/okay-guy.jpg'/>
+              <p class="caption">Okay Guy</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="img-container">
+              <img class="cap-img" src='/images/founding-memes/poker-face.jpg'/>
+              <p class="caption">Poker Face</p>
+            </div>
+            <div class="img-container">
+              <img class="cap-img" src='/images/founding-memes/socially-awkward-penguin.jpg'/>
+              <p class="caption">Socially Awkward Penguin</p>
+            </div>
+            <div class="img-container">
+              <img class="cap-img" src='/images/founding-memes/troll.jpg'/>
+              <p class="caption">Troll Face</p>
+            </div>
+            <div class="img-container">
+              <img class="cap-img" src='/images/founding-memes/you-dont-say.jpg'/>
+              <p class="caption">Nick Cage - You Don't Say?</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
     </div>
 
@@ -221,6 +231,8 @@
     </div>
 
   </div>
+
+  <script text="type/javascript" src="/script.js"></script>
 
 </body>
 
