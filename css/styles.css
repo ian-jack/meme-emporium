@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h1,
+h2,
+.main-text,
+.bio {
+  color: #d0d0d0;
+}
+
+.content,
+h2,
+.main-text {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.row {
+  padding: 25px;
+}
+
+.divider {
+  height: 50px;
+}
+
+h2,
+.main-text {
+  padding-left: 20px;
+  display: flex;
+}
+
+.banner-image {
+  height: 350px;
+  width: 100%;
+}
+
+.img-container {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  padding: 10px;
+}
+
+.cap-img {
+  width: 100%;
+  height: 100%;
+}
+
+.description, h3, .caption {
+  color: #c3c3c3;
+}
+
+.title-container {
+  margin-top: 20px;
+  width: 100%
+}
+
+.main-text {
+  width: 1200px;
+}
+
+.bio {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bio-text {
+  margin: 20px;
+}
+
+.col-sm {
+  padding: 10px;
+  margin: 10px;
+}
+
+.icon-img {
+  margin: 10px;
+  height: 60px;
+  width: 45px;
+}
+
+h4 {
+  align-self: center;
+  color: #d0d0d0;
+}
+
+.review-body {
+  color: #d0d0d0;
+}
+
+body {
+  background-color: #393939;
+}
+
+/* Menu */
+.bg-dark {
+  background-color: #00cdcd !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+.footer {
+  background-color: #00cdcd;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50px;
+}
+
+.git-link {
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+/*Mobile Styles*/
+@media only screen and (max-width: 400px) {
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .banner-image {
+    height: 200px;
+  }
+
+  .profile-img {
+    height: 360px;
+    width: 270px;
+  }
+
+  .hover-cap {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+}
+
+/*Desktop Styles*/
+@media only screen and (min-width: 400px) {
+
+  .col-sm:hover .hover-cap {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .profile-img {
+    height: 400px;
+    width: 300px;
+  }
+
+  .bio-text {
+    width: 700px;
+    align-self: center;
+  }
+}
